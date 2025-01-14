@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Orders{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Orders</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Table Number</th>
+                    <th>Reservation Name</th>
+                    <th>Reservation Phone</th>
+                    <th>Reservation Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reservation in reservations %}
+                <tr>
+                    <td>{{ reservation.table.table_number }}</td>
+                    <td>{{ reservation.reservation_name }}</td>
+                    <td>{{ reservation.reservation_phone }}</td>
+                    <td>{{ reservation.reservation_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Sales Report{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Sales Report</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Menu Item</th>
+                    <th>Total Quantity</th>
+                    <th>Total Sales</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in sales_data %}
+                <tr>
+                    <td>{{ data.menu_item__name }}</td>
+                    <td>{{ data.total_quantity }}</td>
+                    <td>{{ data.total_sales|floatformat:2 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
