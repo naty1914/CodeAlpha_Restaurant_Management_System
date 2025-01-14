@@ -1,4 +1,3 @@
-# CodeAlpha_Restaurant-_Management-_System
 # CodeAlpha Restaurant Management System
 
 The CodeAlpha Restaurant Management System is a comprehensive solution designed to streamline the operations of a restaurant. It includes features for managing menu items, orders, tables, reservations, inventory, and sales reporting.
